@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mygallery/core/di/injection.dart';
 import 'package:mygallery/core/network/local/cache_helper.dart';
 import 'package:mygallery/core/util/resources/constants_manager.dart';
-import 'package:mygallery/core/util/resources/extensions_manager.dart';
 import 'package:mygallery/features/home/presentation/controller/home_cubit.dart';
 import 'package:mygallery/features/home/presentation/screens/home_gallery.dart';
 import 'package:mygallery/features/login/presentation/controller/login_cubit.dart';
@@ -15,8 +14,7 @@ void main() async{
   late Widget widget;
   token = await sl<CacheHelper>().get('token');
   email = await sl<CacheHelper>().get('email');
-  id = await sl<CacheHelper>().get('id');
-  name = await sl<CacheHelper>().get('name');
+
 
   if(token != null){
     widget = HomeGallery(name: name!,);

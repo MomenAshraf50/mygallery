@@ -78,8 +78,6 @@ class HomeGallery extends StatelessWidget {
                             navigateAndFinish(context, const LogInScreen());
                             sl<CacheHelper>().clear('token');
                             sl<CacheHelper>().clear('name');
-                            sl<CacheHelper>().clear('email');
-                            sl<CacheHelper>().clear('id');
                           },
                           imgPath: AppString.logOutIconPath,
                         ),
