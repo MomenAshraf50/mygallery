@@ -69,7 +69,10 @@ class DioImpl extends DioHelper {
       if (!isMultipart) 'Accept': 'application/json',
       'Accept-Language': 'en',
       if (token != null)
-        'Authorization': '${base == null ? 'Token' : ''} $token'
+        'Authorization': 'Bearer $token'
+    };
+    dio.options.extra = {
+      'Token': token
     };
 
     if (url.contains('??')) {
@@ -116,14 +119,13 @@ class DioImpl extends DioHelper {
     } else {
       dio.options.baseUrl = baseUrl;
     }
-
     dio.options.headers = {
       if (isMultipart) 'Content-Type': 'multipart/form-data',
       if (!isMultipart) 'Content-Type': 'application/json',
       if (!isMultipart) 'Accept': 'application/json',
       'Accept-Language': 'en',
       if (token != null)
-        'Authorization': '${base == null ? 'Token' : ''} $token'
+        'Authorization': 'Bearer $token'
     };
 
     if (url.contains('??')) {
