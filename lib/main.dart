@@ -13,7 +13,7 @@ void main() async{
   await ServiceLocator().init();
   late Widget widget;
   token = await sl<CacheHelper>().get('token');
-  email = await sl<CacheHelper>().get('email');
+  name = await sl<CacheHelper>().get('name');
 
 
   if(token != null){

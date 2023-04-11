@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mygallery/core/di/injection.dart';
 import 'package:mygallery/core/network/local/cache_helper.dart';
@@ -35,7 +34,7 @@ class HomeGallery extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: double.infinity,
-              child: Image.asset(AppString.galleryBackgroundPath),
+              child: Image.asset(AppString.galleryBackgroundPath,fit: BoxFit.cover,),
             ),
             Padding(
               padding: EdgeInsets.all(20.rSp),

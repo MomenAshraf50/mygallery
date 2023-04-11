@@ -78,6 +78,7 @@ class LogInContainer extends StatelessWidget {
                   listener: (context, state){
                     if(state is LogInSuccessState){
                       sl<CacheHelper>().put('token',state.logInEntity.token);
+                      token = state.logInEntity.token;
                       sl<CacheHelper>().put('name',state.logInEntity.userData.name);
                       navigateAndFinish(context, HomeGallery(name: state.logInEntity.userData.name,));
 
