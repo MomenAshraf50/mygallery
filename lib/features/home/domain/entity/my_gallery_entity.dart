@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 class MyGalleryEntity extends Equatable {
   String status;
-  List<String> images;
+  List<dynamic> images;
   String message;
 
   MyGalleryEntity({

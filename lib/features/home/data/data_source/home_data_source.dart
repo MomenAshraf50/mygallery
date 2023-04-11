@@ -28,7 +28,7 @@ class HomeRemoteDataSource extends HomeBaseRemoteDataSource {
 
   @override
   Future<UploadImageModel> uploadImage(UploadImageParams params) async {
-    final Response response = await dioHelper.get(
+    final Response response = await dioHelper.post(
         url: uploadImageEndpoint,
         token: token,
         data: FormData.fromMap({
